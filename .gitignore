@@ -30,6 +30,10 @@ plugins/android.json
 plugins/ios.json
 $RECYCLE.BIN/
 src/app/admin/
+src/assets/sistemas/
+src/assets/portadas/
+src/assets/videos/
+src/assets/capturas/
 
 .DS_Store
 Thumbs.db
