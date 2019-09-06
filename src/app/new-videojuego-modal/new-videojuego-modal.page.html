@@ -1,0 +1,54 @@
+<ion-header no-border>
+    <ion-toolbar color="dark">
+        <ion-title>Añadir nuevo sistema</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+    <form #formulario="ngForm" (ngSubmit)="agregarVideojuego()">
+        <ion-list>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Titulo:</ion-label>
+                <ion-input type="text" name="titulo" [(ngModel)]="videojuego.titulo" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Género:</ion-label>
+                <ion-input type="text" name="genero" [(ngModel)]="videojuego.genero" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Desarrollador:</ion-label>
+                <ion-input type="text" name="desarrollador" [(ngModel)]="videojuego.desarrollador" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Lanzamiento:</ion-label>
+                <ion-input type="text" name="lanzamiento" [(ngModel)]="videojuego.lanzamiento" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Jugadores:</ion-label>
+                <ion-input type="text" name="jugadores" [(ngModel)]="videojuego.jugadores" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Idiomas:</ion-label>
+                <ion-input type="text" name="idiomas" [(ngModel)]="videojuego.idiomas" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Sipnosis:</ion-label>
+                <ion-input type="text" name="sipnosis" [(ngModel)]="videojuego.sipnosis" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Portada:</ion-label>
+                <ion-input type="text" name="portada" [(ngModel)]="videojuego.portada" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Captura:</ion-label>
+                <ion-input type="text" name="captura" [(ngModel)]="videojuego.captura" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Video:</ion-label>
+                <ion-input type="text" name="video" [(ngModel)]="videojuego.video" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button expand="full" type="submit" [disabled]="formulario.invalid">Guardar Videojuego</ion-button>
+    </form>
+    <ion-button expand="full" (click)="cancelar()">Cancelar</ion-button>
+</ion-content>

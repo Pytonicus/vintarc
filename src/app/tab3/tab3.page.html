@@ -1,9 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Maquínas Arcade"></app-header>
 
-<ion-content></ion-content>
+<ion-content color="dark">
+    <div *ngFor="let maquina of dispositivoService.sistemas">
+        <p *ngIf="maquina.tipoSistema === 'Arcade'">{{maquina.marca + " " + maquina.modelo}}</p>
+    </div>
+</ion-content>

@@ -1,6 +1,7 @@
 export interface Sistema {
     modelo: string,
     marca: string,
+    tipoSistema: string,
     lanzamiento: string,
     cese: string,
     generacion: string,

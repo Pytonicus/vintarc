@@ -1,0 +1,79 @@
+<ion-header no-border>
+    <ion-toolbar color="dark">
+        <ion-title>Añadir nuevo sistema</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+    <form #formulario="ngForm" (ngSubmit)="agregarConsola()">
+        <ion-list>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Modelo:</ion-label>
+                <ion-input type="text" name="modelo" [(ngModel)]="sistema.modelo" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Marca:</ion-label>
+                <ion-select [(ngModel)]="sistema.marca" [ngModelOptions]="{standalone: true}" okText="seleccionar" cancelText="volver">
+                    <ion-select-option *ngFor="let marca of marcas" [value]="marca">{{marca}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Tipo de Sistema:</ion-label>
+                <ion-select [(ngModel)]="sistema.tipoSistema" [ngModelOptions]="{standalone: true}" okText="seleccionar" cancelText="volver">
+                    <ion-select-option *ngFor="let sistema of tipoSistema" [value]="sistema">{{sistema}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Lanzamiento:</ion-label>
+                <ion-input type="text" name="lanzamiento" [(ngModel)]="sistema.lanzamiento" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Cese:</ion-label>
+                <ion-input type="text" name="cese" [(ngModel)]="sistema.cese" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Generación:</ion-label>
+                <ion-select [(ngModel)]="sistema.generacion" [ngModelOptions]="{standalone: true}" okText="seleccionar" cancelText="volver">
+                    <ion-select-option *ngFor="let edad of generacion" [value]="edad">{{edad}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Ventas:</ion-label>
+                <ion-input type="text" name="ventas" [(ngModel)]="sistema.ventas" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Títulos Oficiales:</ion-label>
+                <ion-input type="text" name="titulosOficiales" [(ngModel)]="sistema.titulosOficiales" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Soporte:</ion-label>
+                <ion-select [(ngModel)]="sistema.soporte" [ngModelOptions]="{standalone: true}" okText="seleccionar" cancelText="volver">
+                    <ion-select-option *ngFor="let soporte of soportes" [value]="soporte">{{soporte}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Procesador:</ion-label>
+                <ion-input type="text" name="procesador" [(ngModel)]="sistema.procesador" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Gráficos:</ion-label>
+                <ion-input type="text" name="graficos" [(ngModel)]="sistema.graficos" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Sonido:</ion-label>
+                <ion-input type="text" name="sonido" [(ngModel)]="sistema.sonido" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Memoria Ram:</ion-label>
+                <ion-input type="text" name="ram" [(ngModel)]="sistema.ram" required></ion-input>
+            </ion-item>
+            <ion-item color="tertiary">
+                <ion-label position="floating">Imagen del dispositivo:</ion-label>
+                <ion-input type="text" name="imagen" [(ngModel)]="sistema.imagen" required></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <ion-button expand="full" type="submit" [disabled]="formulario.invalid">Guardar Sistema</ion-button>
+    </form>
+    <ion-button expand="full" (click)="cancelar()">Cancelar</ion-button>
+</ion-content>

@@ -1,11 +1,7 @@
-<ion-header no-border>
-    <ion-toolbar color="dark">
-        <ion-title color="primary">
-            Tab One
-        </ion-title>
-    </ion-toolbar>
-</ion-header>
+<app-header titulo="Maquínas de Consumo"></app-header>
 
 <ion-content color="dark">
-
+    <div *ngFor="let maquina of dispositivoService.sistemas">
+        <p *ngIf="maquina.tipoSistema === 'Consumo'">{{maquina.marca + " " + maquina.modelo}}</p>
+    </div>
 </ion-content>

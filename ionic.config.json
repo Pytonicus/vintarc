@@ -1,5 +1,7 @@
 {
   "name": "vintarc",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

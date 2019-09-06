@@ -1,9 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Maquínas Portátiles"></app-header>
 
-<ion-content></ion-content>
+<ion-content color="dark">
+    <div *ngFor="let maquina of dispositivoService.sistemas">
+        <p *ngIf="maquina.tipoSistema === 'Portatil'">{{maquina.marca + " " + maquina.modelo}}</p>
+    </div>
+</ion-content>
