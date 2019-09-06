@@ -30,9 +30,9 @@ plugins/android.json
 plugins/ios.json
 $RECYCLE.BIN/
 src/app/admin/
-src/assets/sistemas/
-src/assets/portadas/
-src/assets/videos/
+src/assets/images/sistemas/
+src/assets/images/portadas/
+src/assets/images/videos/
 src/assets/capturas/
 
 .DS_Store
